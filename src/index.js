@@ -4,8 +4,14 @@ import GlobalStyles from "./styles";
 import Pages from "./pages";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
+let clientURI = "http://localhost:4000";
+if(process.env.NODE_ENV === 'production') {
+  clientURI = "https://catstronauts-client-production-74d9.up.railway.app";
+}
+
+
 const client = new ApolloClient({
-  uri: "http://localhost:4000", // change to YOUR own production server
+  uri: clientURI,
   cache: new InMemoryCache(),
   name: "web",
   version: "1.0",
