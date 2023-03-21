@@ -6,7 +6,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 let clientURI = "http://localhost:4000";
 if(process.env.NODE_ENV === 'production') {
-  clientURI = "https://catstronauts-client-production-74d9.up.railway.app";
+  clientURI = "https://catstronauts-server-production-4002.up.railway.app/";
 }
 
 
